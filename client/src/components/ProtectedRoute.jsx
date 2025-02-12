@@ -52,7 +52,13 @@ function ProtectedRoute({ children }) {
     };
 
     if (isAuthorized === null) {
-        return <LoadingIndicator />;
+        return (
+            <div className="loading-container flex flex-col items-center justify-center h-screen">
+            <LoadingIndicator />
+            <LoadingIndicator />
+            <LoadingIndicator />
+            </div>
+        );
     }
 
     return isAuthorized ? children : <Navigate to="/login" />;
