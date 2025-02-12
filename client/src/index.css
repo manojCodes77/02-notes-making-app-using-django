@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@keyframes loading-bar {
+    0% {
+        width: 0%;
+        opacity: 1;
+    }
+    50% {
+        width: 70%;
+        opacity: 0.8;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@layer utilities {
+    .animate-loading-bar {
+        animation: loading-bar 1.5s ease-in-out infinite;
+    }
+}
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@layer components {
+    .ripple-button {
+        @apply relative overflow-hidden;
+    }
+    
+    .ripple-effect {
+        @apply absolute bg-white/30 rounded-full;
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        animation: ripple 1s;
+    }
+}
