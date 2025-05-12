@@ -87,9 +87,6 @@
 | `/api/notes/:id` | PUT    | Update existing note     |  
 | `/api/notes/:id` | DELETE | Remove note              |  
 
-## License  
-MIT License - See [LICENSE](LICENSE) for details  
-
 ---
 
 **Key References**:  
